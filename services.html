@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIFA SUMBA | Services</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .animated-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover::after {
+            width: 100%;
+        }
+        .service-card:hover .service-icon {
+            transform: translateY(-5px) scale(1.05);
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.1), 0 10px 10px -5px rgba(79, 70, 229, 0.04);
+        }
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 48px;
+            height: calc(100% - 48px);
+            width: 2px;
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-indigo-500 font-bold text-2xl">ANIFA SUMBA</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">About</a>
+                        <a href="portfolio.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Portfolio</a>
+                        <a href="services.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-indigo-900">Services</a>
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 z-40 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-lg" style="padding-top: 4rem;">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="index.html" class="text-white text-2xl font-medium">Home</a>
+            <a href="about.html" class="text-gray-300 text-2xl font-medium hover:text-white">About</a>
+            <a href="portfolio.html" class="text-gray-300 text-2xl font-medium hover:text-white">Portfolio</a>
+            <a href="services.html" class="text-white text-2xl font-medium bg-indigo-900 px-4 py-2 rounded-lg">Services</a>
+            <a href="contact.html" class="text-gray-300 text-2xl font-medium hover:text-white">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-600">
+                My Services
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive digital solutions tailored to your unique needs
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 transition-all hover:border-indigo-500">
+                <div class="service-icon bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-transform">
+                    <i data-feather="code" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                <p class="text-gray-300 mb-6">
+                    Custom websites and web applications built with modern technologies for performance, scalability, and security.
+                </p>
+                <ul class="space-y-3 text-gray-400">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Responsive Design</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Custom CMS Solutions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>API Integrations</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 transition-all hover:border-indigo-500">
+                <div class="service-icon bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-transform">
+                    <i data-feather="layout" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+                <p class="text-gray-300 mb-6">
+                    Beautiful, intuitive interfaces designed to enhance user experience and drive engagement.
+                </p>
+                <ul class="space-y-3 text-gray-400">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>User Research</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Wireframing & Prototyping</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Interaction Design</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 transition-all hover:border-indigo-500">
+                <div class="service-icon bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-transform">
+                    <i data-feather="smartphone" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Mobile Development</h3>
+                <p class="text-gray-300 mb-6">
+                    Cross-platform mobile applications that deliver seamless experiences across all devices.
+                </p>
+                <ul class="space-y-3 text-gray-400">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>iOS & Android Development</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Progressive Web Apps</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>App Store Optimization</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 transition-all hover:border-indigo-500">
+                <div class="service-icon bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-transform">
+                    <i data-feather="pen-tool" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Brand Identity</h3>
+                <p class="text-gray-300 mb-6">
+                    Comprehensive branding solutions that communicate your unique value and personality.
+                </p>
+                <ul class="space-y-3 text-gray-400">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Logo & Visual Identity</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Brand Strategy</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Style Guides</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 transition-all hover:border-indigo-500">
+                <div class="service-icon bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-transform">
+                    <i data-feather="bar-chart-2" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Digital Marketing</h3>
+                <p class="text-gray-300 mb-6">
+                    Data-driven marketing strategies to increase visibility, engagement, and conversions.
+                </p>
+                <ul class="space-y-3 text-gray-400">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>SEO Optimization</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Content Strategy</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Social Media Management</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-card bg-gray-800 rounded-xl p-8 border border-gray-700 transition-all hover:border-indigo-500">
+                <div class="service-icon bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 transition-transform">
+                    <i data-feather="headphones" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Support & Maintenance</h3>
+                <p class="text-gray-300 mb-6">
+                    Ongoing support to keep your digital assets running smoothly and securely.
+                </p>
+                <ul class="space-y-3 text-gray-400">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Performance Optimization</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Security Updates</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="w-4 h-4 text-indigo-400 mr-2 mt-1"></i>
+                        <span>Content Updates</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+ <!-- CTA -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Elevate Your Digital Presence?</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Let's discuss how we can help you achieve your goals.</p>
+        <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-indigo-500/30">
+            Get in Touch
+            <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">ANIFA SUMBA</h3>
+                    <p class="text-gray-400">Pushing the boundaries of digital innovation.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Consulting</a></li>
+                    </ul>
+                </div>
+        
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2025 ANIFA SUMBA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            feather.replace();
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

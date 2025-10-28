@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIFA SUMBA | About</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .animated-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover::after {
+            width: 100%;
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 32px;
+            top: 48px;
+            height: calc(100% - 48px);
+            width: 2px;
+            background: #4f46e5;
+        }
+        .skill-bar {
+            height: 8px;
+            background-color: #1f2937;
+            border-radius: 4px;
+        }
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shine 2s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-indigo-500 font-bold text-2xl">ANIFA SUMBA</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-indigo-900">About</a>
+                        <a href="portfolio.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Portfolio</a>
+                        <a href="services.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Services</a>
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 z-40 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-lg" style="padding-top: 4rem;">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="index.html" class="text-white text-2xl font-medium">Home</a>
+            <a href="about.html" class="text-white text-2xl font-medium bg-indigo-900 px-4 py-2 rounded-lg">About</a>
+            <a href="portfolio.html" class="text-gray-300 text-2xl font-medium hover:text-white">Portfolio</a>
+            <a href="services.html" class="text-gray-300 text-2xl font-medium hover:text-white">Services</a>
+            <a href="contact.html" class="text-gray-300 text-2xl font-medium hover:text-white">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-600">
+                About ANIFA SUMBA
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                I am a passionate designer, developer, and strategists creating digital experiences that matter.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">My Story</h2>
+                <p class="text-gray-300 mb-6">
+                I am a computer science student in Meru,who discovered my passion for web development and begun coding in Notepad. As I mastered HTML, CSS, and JavaScript, I began blending design with purpose.My breakthrough came when I led the UI design for a climate forecasting tool tailored to local farmers.By graduation, My portfolio will be reflecting not just technical skill, but a deep commitment to community impact and beautiful, functional design.
+                </p>
+                <p class="text-gray-300 mb-6">
+                    Today, I have grown into a fullstack  digital developer, but I've never lost my passion for innovation and my commitment to excellence.
+                </p>
+                <p class="text-gray-300">
+                    My approach combines technical expertise with creative thinking to deliver solutions that not only meet but exceed my expectations.
+                </p>
+            </div>
+            <div class="relative">
+                <div class="bg-indigo-900 bg-opacity-20 rounded-xl overflow-hidden aspect-video">
+                    <img src="WhatsApp Image 2025-10-25 at 00.11.12_ce44bb93.jpg" alt="Our Team" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-indigo-600 w-32 h-32 rounded-full flex items-center justify-center text-white font-bold">
+                    Since 2023
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl backdrop-filter backdrop-blur-lg">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">My Expertise</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">I combine technical skills with creative thinking to deliver exceptional results.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-300">UI/UX Design</span>
+                    <span class="text-indigo-400">95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-300">Web Development</span>
+                    <span class="text-indigo-400">90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-300">Mobile Development</span>
+                    <span class="text-indigo-400">85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-300">Brand Strategy</span>
+                    <span class="text-indigo-400">92%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 92%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl backdrop-filter backdrop-blur-lg">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">My Values</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">These principles guide everything I do</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+                <div class="bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-feather="zap" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                <p class="text-gray-300">I push boundaries and explore new possibilities in digital experiences.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-feather="heart" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Passion</h3>
+                <p class="text-gray-300">I love what I do, and it shows in every project I undertake.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="bg-indigo-900 bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-feather="shield" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Integrity</h3>
+                <p class="text-gray-300">I build trust through transparency, honesty, and ethical practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">ANIFA SUMBA</h3>
+                    <p class="text-gray-400">Pushing the boundaries of digital innovation.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Consulting</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2025 ANIFA SUMBA . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            feather.replace();
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

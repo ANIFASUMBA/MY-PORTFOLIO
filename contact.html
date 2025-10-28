@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIFA SUMBA | Contact</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        .animated-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover::after {
+            width: 100%;
+        }
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .form-input {
+            background-color: rgba(31, 41, 55, 0.7);
+            border: 1px solid #374151;
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+            background-color: rgba(31, 41, 55, 0.9);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen overflow-x-hidden">
+    <div id="vanta-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-indigo-500 font-bold text-2xl">ANIFA SUMBA</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">About</a>
+                        <a href="portfolio.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Portfolio</a>
+                        <a href="services.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white animated-underline">Services</a>
+                        <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-indigo-900">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 z-40 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-lg" style="padding-top: 4rem;">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="index.html" class="text-white text-2xl font-medium">Home</a>
+            <a href="about.html" class="text-gray-300 text-2xl font-medium hover:text-white">About</a>
+            <a href="portfolio.html" class="text-gray-300 text-2xl font-medium hover:text-white">Portfolio</a>
+            <a href="services.html" class="text-gray-300 text-2xl font-medium hover:text-white">Services</a>
+            <a href="contact.html" class="text-white text-2xl font-medium bg-indigo-900 px-4 py-2 rounded-lg">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-600">
+                Looking forward to collaborating
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Have a project in mind or want to learn more about my services? Get in touch!
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="bg-gray-800 bg-opacity-50 rounded-xl p-8 backdrop-filter backdrop-blur-lg border border-gray-700">
+                <h2 class="text-2xl font-bold mb-8">Send me a Message</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                        <input type="text" id="subject" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                        <textarea id="message" rows="5" class="form-input w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-lg font-semibold transition-all transform hover:scale-[1.02] shadow-lg shadow-indigo-500/30">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-8">Contact Information</h2>
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-900 bg-opacity-20 w-12 h-12 rounded-lg flex items-center justify-center mr-6">
+                            <i data-feather="mail" class="w-5 h-5 text-indigo-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2">Email</h3>
+                            <p class="text-gray-300">sumbaanifa@gmail.com
+</body>
+</html>
